@@ -1,0 +1,105 @@
+
+// first way ok but now you can't add any other atributes
+//-var imagesDr = ['assets/img/design-img/drib-1.jpg', 'assets/img/design-img/drib-2.jpg', 'assets/img/design-img/drib-3.png' ,'assets/img/design-img/drib-4.jpg','assets/img/design-img/drib-5.jpg','assets/img/design-img/drib-6.jpg']
+//-var colDr =['green','blue','red','yellow','purple','white']
+//
+//-var imagesBe = ['assets/img/design-img/be-1.png', 'assets/img/design-img/be-2.jpg', 'assets/img/design-img/be-3.jpg' ,'assets/img/design-img/be-4.jpg','assets/img/design-img/be-5.jpg','assets/img/design-img/be-6.png']
+//
+//mixin design-img(img,color)
+//    a(href="#" data-color=color).design-img-link
+//          img(src=img)
+//
+//section.design
+//    .flex.flex--center
+//        .col-50.flex.flex--center.dribble
+//            .col-1
+//                p.home-lead  ...Updating Dribble... 
+//                each val in imagesDr and val1 in colDr
+//                    +design-img(val,val1)
+//                .cf    
+//                a(href="#").home-cta See more on Dribble
+//
+//        .col-50.flex.flex--center.behance
+//            .col-1
+//                p.home-lead  ...and Behance...
+//                each val in imagesBe
+//                    +design-img(val)
+//                .cf
+//                a(href="").home-cta See more on Behance
+
+
+
+
+//Second way
+//mixin design-img(color)
+//    a(href="#" )&attributes.design-img-link
+//          img&attributes(attributes)
+//
+//section
+//    .flex.flex--center
+//        .col-50.flex.flex--center
+//            .col-1
+//                p.home-lead  ...Updating Dribble...
+//                +design-img((src="assets/img/design-img/drib-2.jpg")) 
+//                +design-img(src="assets/img/design-img/drib-2.jpg")
+//                +design-img(src="assets/img/design-img/drib-3.png")
+//                +design-img(src="assets/img/design-img/drib-4.jpg")
+//                +design-img(src="assets/img/design-img/drib-5.jpg")
+//                +design-img(src="assets/img/design-img/drib-6.jpg")
+//                a(href="#").home-cta See more on Dribble
+//
+//        .col-50.flex.flex--center
+//            .col-1
+//                p.home-lead  ...and Behance...
+//                +design-img(src="assets/img/design-img/be-1.png") 
+//                +design-img(src="assets/img/design-img/be-2.jpg")
+//                +design-img(src="assets/img/design-img/be-3.jpg")
+//                +design-img(src="assets/img/design-img/be-4.jpg")
+//                +design-img(src="assets/img/design-img/be-5.jpg")
+//                +design-img(src="assets/img/design-img/be-6.png")
+//                a(href="").home-cta See more on Behance
+
+
+
+// Third way is travis way but it's Jade so it won't work what I was thinking
+
+  
+    
+
+section.design#design
+  .flex.flex--center
+    .col-50.flex.flex--center.dribble(data-orig-color="#ea4c89")
+      .col-1
+        p.home-lead ...Updating Dribbble...
+        a(href="#" data-color='orange').design-img-link
+            img(src="assets/img/design-img/drib-1.jpg")
+        a(href="#" data-color='#aeb3b0').design-img-link
+            img(src="assets/img/design-img/drib-2.jpg")
+        a(href="#" data-color='#38decc').design-img-link    
+            img(src="assets/img/design-img/drib-3.png")
+        a(href="#" data-color='#d21d16').design-img-link
+            img(src="assets/img/design-img/drib-4.jpg")
+        a(href="#" data-color='#890cee').design-img-link
+            img(src="assets/img/design-img/drib-5.jpg")
+        a(href="#" data-color='#d6d599').design-img-link
+            img(src="assets/img/design-img/drib-6.jpg")
+        .cf
+        a(href="https://dribbble.com/travisneilson").home-cta See more on Dribbble
+    
+    .col-50.flex.flex--center.behance(data-orig-color="#1769ff")
+      .col-1
+        p.home-lead ...and Behance...
+        a(href="#" data-color='orange').design-img-link
+            img(src="assets/img/design-img/be-1.png")
+        a(href="#" data-color='#d32022').design-img-link
+            img(src="assets/img/design-img/be-2.jpg")
+        a(href="#" data-color='#4c4c4c').design-img-link
+            img(src="assets/img/design-img/be-3.jpg")
+        a(href="#" data-color='#f59e82').design-img-link
+            img(src="assets/img/design-img/be-4.jpg")
+        a(href="#" data-color='#d57628').design-img-link
+            img(src="assets/img/design-img/be-5.jpg")
+        a(href="#" data-color='#f6c599').design-img-link
+            img(src="assets/img/design-img/be-6.png")
+        .cf
+        a(href="https://www.behance.net/travisneilson").home-cta See more on Behance

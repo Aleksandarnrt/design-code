@@ -1,0 +1,104 @@
+section.notes
+    background: 
+        image: url(../img/notes-bg.jpg)
+        size: cover
+        position: center
+    color: white
+    
+    .col-1
+        padding-left: 30px
+        font-size: 18px
+        font-style: italic
+        line-height: 1.7
+        
+        &:first-child
+            padding-left: 0
+            padding-right: 30px
+            text-align: right
+            border-right: 2px solid white
+        
+        @media(max-width: 640px)
+            padding: 0 10px
+            
+            &:first-child
+                padding: 0 10px
+                text-align: left
+                border: none
+                margin-bottom: 10px
+        
+    a
+        color: white
+        text-decoration: underline
+    ul
+        list-style: none
+        padding: 0px
+        margin: 0
+        
+    p
+        margin: 0
+        
+    
+            
+    .form-display
+        background: rgba(white,0.3)
+        border: 3px solid white
+        box-shadow: 0px 3px 8px rgba(black, 0.3)
+        display: flex
+        margin: 50px 0
+        
+        @media(max-width: 590px)
+            display: block
+            
+        
+        .mc-field-group
+            position: relative
+            flex: 2 
+            
+            &:first-child
+                border-right: 4px solid white
+            
+                @media(max-width: 590px)
+                    border-right: none
+                    border-bottom: 4px solid white
+                
+        
+        input 
+            position: relative
+            border: 0
+            padding: 0
+            background: none
+            display: block
+            height: 60px
+            width: 100%
+            padding: 0 10px
+            color: white
+            font-size: 18px
+            
+            
+            &:focus
+                outline: none
+        
+            &[type="submit"]
+                flex: 1
+                background: white
+                color: #be9e44
+                font-size: 24px
+                padding: 0 15px
+                
+            
+        label
+            position: absolute
+            z-index: 2
+            font-size: 12px
+            left: 5px
+        
+    .home-lead 
+        text-align: center
+        
+        
+    
+        
+        
+    
+        
+        

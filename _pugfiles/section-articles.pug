@@ -1,0 +1,43 @@
+mixin thumbs(words, date)
+    .article-meta
+        .name #{words}
+        .date #{date}
+            
+section.articles#articles
+    .flex.flex--center
+        .col-50
+            .article-wrap 
+                 a(href="" style="background-image: url(assets/img/posts/thumbnails/post-1.png)").article-thumb
+                     +thumbs("Default switch","Apr 7, 2010")
+                 a(href="" style="background-image: url(assets/img/posts/thumbnails/post-2.jpg)").article-thumb
+                     +thumbs("Old versus neue","Apr 7, 2010")
+                 a(href="" style="background-image: url(assets/img/posts/thumbnails/post-3.jpg)").article-thumb
+                     +thumbs("Spheres of influence","Apr 7, 2010")
+                 a(href="" style="background-image: url(assets/img/posts/thumbnails/post-4.jpg)").article-thumb
+                     +thumbs("Default switch","Apr 7, 2010")
+                 a(href="" style="background-image: url(assets/img/posts/thumbnails/post-5.jpg)").article-thumb
+                     +thumbs("Default switch","Apr 7, 2010")
+                 a(href="" style="background-image: url(assets/img/posts/thumbnails/post-6.gif)").article-thumb
+                     +thumbs("Default switch","Apr 7, 2010")
+                 a(href="" style="background-image: url(assets/img/posts/thumbnails/post-7.png)").article-thumb
+                     +thumbs("Default switch","Apr 7, 2010")
+                 a(href="" style="background-image: url(assets/img/posts/thumbnails/post-8.jpg)").article-thumb
+                     +thumbs("Default switch","Apr 7, 2010")
+                 a(href="" style="background-image: url(assets/img/posts/thumbnails/post-9.jpg)").article-thumb
+                     +thumbs("Default switch","Apr 7, 2010")
+                 a(href="" style="background-image: url(assets/img/posts/thumbnails/post-10.jpg)").article-thumb
+                     +thumbs("Default switch","Apr 7, 2010")
+                 a(href="" style="background-image: url(assets/img/posts/thumbnails/post-11.jpg)").article-thumb
+                     +thumbs("Default switch","Apr 7, 2010")
+                 a(href="" style="background-image: url(assets/img/posts/thumbnails/post-12.png)").article-thumb
+                     +thumbs("Default switch","Apr 7, 2010")
+                
+                
+                  
+                
+        .col-50.flex.flex--center.order-first 
+            .col-1
+                .desc-wrap
+                    p.home-lead.outdented ...Writing and designig articles...
+                    a(href="#").home-cta See all Articles 
+            

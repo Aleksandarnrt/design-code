@@ -1,22 +1,25 @@
-mixin face
-    li.face(style="background-image: url(http://fillmurray.com/80/80);")
-        .bubble
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit.Repudiandae voluptatem inventore perspiciatis voluptate maiores earum hic qui optio, vitae ex assumenda voluptatibus reiciendis aspernatur animi, ullam accusamus minus sed!
-            cite - Nathan Jacobs
+mixin face(text, name)
+    .bubble
+        p #{text}
+        cite - #{name}
 
-section.mentoring
+section.mentoring#mentoring
     .flex.flex--center
         .col-1
             ul.faces
-                +face
-                +face
-                li.face.has-bubble-open(style="background-image: url(http://fillmurray.com/80/80);")
-                    .bubble
-                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit.Repudiandae voluptatem inventore perspiciatis voluptate maiores earum h.
-                        cite - Nathan Jacobs
-                +face
-                +face
+                li.face(style="background-image: url(/assets/img/avatars/aleks.jpg); ")
+                    +face("He provided me with a clear perspective of how I could utilise and manage my time effectively to get most out of my personal projects. But most importantly Travis eased some of the concerns I once had about landing a job in the Web Design industry.","Aleksandra Jakimova")
+                li.face(style = "background: url(/assets/img/avatars/nives.jpg); background-position: -2px 0px ; background-repeat: no-repeat;")
+                     +face("Travis talked me through the necessary steps I needed to take to land a Designer/Front End Developer role with a digital agency. We discussed what I needed to have in my portfolio, as well as what I needed to be doing on a daily basis to make my dream a reality.","Nives Lakic")
+                li.face(style = "background: url(/assets/img/avatars/adam.jpg);  background-position: 0px -20px ; background-repeat: no-repeat;")
+                     +face("He was very engaging and gave me a lot of great advice/guidance.  I feel more confident about where to go when choosing what to put in my portfolio/what to expect during the job application process.","Adam Redzic")
+                li.face(style = "background: url(/assets/img/avatars/katarina.jpg);  background-position: -40px 0px ; background-repeat: no-repeat; ")
+                     +face("As someone re-entering into the Creative Art / Web industry with very minimal support, this call was a big help. It allowed me to gauge my progress, choices, and goals against someone that has already been through this phase.","Katarina Mladenovic")
+                li.face(style = "background: url(/assets/img/avatars/ja.jpg);  background-position: -25px 0px ; background-repeat: no-repeat; ")
+                     +face("Travis provided me with his perspective on potential course objectives and units. Our discussion both reinforced many of my ideas and provided me with unique insights that have further fueled my excitement for the opportunity to teach web development.","Aleksandar Picuric")
+                li.back-btn.face
+                     
 
         .col-1
-           p.home-lead.outdented ...Mentoring people like you
+           p.home-lead.outdented ...Mentoring people like you... 
            a(href="#").home-cta Schedule a Call
